@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  llama-service:
+    build:
+      context: .  
+    container_name: llama-container
+    stdin_open: true  
+    tty: true
+    volumes:
+      - ./huggingface_cache:/root/.cache/huggingface
